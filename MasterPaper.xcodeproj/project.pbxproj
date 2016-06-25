@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B38068781D1F2CD5008745AB /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B38068771D1F2CD5008745AB /* Security.framework */; };
+		B380687B1D1F2D6E008745AB /* MasterPaperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B380687A1D1F2D6E008745AB /* MasterPaperViewController.swift */; };
 		F2CFA86F1D1DDC9E00A169B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CFA86E1D1DDC9E00A169B8 /* AppDelegate.swift */; };
-		F2CFA8711D1DDC9E00A169B8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CFA8701D1DDC9E00A169B8 /* ViewController.swift */; };
 		F2CFA8741D1DDC9E00A169B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2CFA8721D1DDC9E00A169B8 /* Main.storyboard */; };
 		F2CFA8761D1DDC9E00A169B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2CFA8751D1DDC9E00A169B8 /* Assets.xcassets */; };
 		F2CFA8791D1DDC9E00A169B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2CFA8771D1DDC9E00A169B8 /* LaunchScreen.storyboard */; };
@@ -34,9 +35,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B38068771D1F2CD5008745AB /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		B380687A1D1F2D6E008745AB /* MasterPaperViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterPaperViewController.swift; sourceTree = "<group>"; };
 		F2CFA86B1D1DDC9E00A169B8 /* MasterPaper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MasterPaper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2CFA86E1D1DDC9E00A169B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F2CFA8701D1DDC9E00A169B8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F2CFA8731D1DDC9E00A169B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F2CFA8751D1DDC9E00A169B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F2CFA8781D1DDC9E00A169B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -54,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B38068781D1F2CD5008745AB /* Security.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +80,7 @@
 		F2CFA8621D1DDC9E00A169B8 = {
 			isa = PBXGroup;
 			children = (
+				B38068771D1F2CD5008745AB /* Security.framework */,
 				F2CFA86D1D1DDC9E00A169B8 /* MasterPaper */,
 				F2CFA8821D1DDC9F00A169B8 /* MasterPaperTests */,
 				F2CFA88D1D1DDC9F00A169B8 /* MasterPaperUITests */,
@@ -98,7 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				F2CFA86E1D1DDC9E00A169B8 /* AppDelegate.swift */,
-				F2CFA8701D1DDC9E00A169B8 /* ViewController.swift */,
+				B380687A1D1F2D6E008745AB /* MasterPaperViewController.swift */,
 				F2CFA8721D1DDC9E00A169B8 /* Main.storyboard */,
 				F2CFA8751D1DDC9E00A169B8 /* Assets.xcassets */,
 				F2CFA8771D1DDC9E00A169B8 /* LaunchScreen.storyboard */,
@@ -135,6 +139,7 @@
 				F2CFA8671D1DDC9E00A169B8 /* Sources */,
 				F2CFA8681D1DDC9E00A169B8 /* Frameworks */,
 				F2CFA8691D1DDC9E00A169B8 /* Resources */,
+				B38068791D1F2CF5008745AB /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -251,13 +256,30 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		B38068791D1F2CF5008745AB /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Secrecy.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F2CFA8671D1DDC9E00A169B8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F2CFA8711D1DDC9E00A169B8 /* ViewController.swift in Sources */,
 				F2CFA86F1D1DDC9E00A169B8 /* AppDelegate.swift in Sources */,
+				B380687B1D1F2D6E008745AB /* MasterPaperViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -482,6 +504,7 @@
 				F2CFA8951D1DDC9F00A169B8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F2CFA8961D1DDC9F00A169B8 /* Build configuration list for PBXNativeTarget "MasterPaperTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +513,7 @@
 				F2CFA8981D1DDC9F00A169B8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F2CFA8991D1DDC9F00A169B8 /* Build configuration list for PBXNativeTarget "MasterPaperUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +522,7 @@
 				F2CFA89B1D1DDC9F00A169B8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
